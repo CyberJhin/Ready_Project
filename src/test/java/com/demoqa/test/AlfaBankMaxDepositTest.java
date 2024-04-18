@@ -65,9 +65,9 @@ public class AlfaBankMaxDepositTest extends TestBase {
             "4| 15,50 %",
             "6| 15,20 %",
             "9| 14,40 %",
-            "12| 13,90 %",
-            "18| 13,71 %",
-            "24| 13,70 %",
+            "12| 14,30 %",
+            "18| 14,01 %",
+            "24| 14,21 %",
             "36| 16,00 %",
     }, delimiter = '|')
     @DisplayName("Checking rates depending on the deposit term")
