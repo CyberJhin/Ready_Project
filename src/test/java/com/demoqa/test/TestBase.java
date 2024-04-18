@@ -24,7 +24,6 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         DriverConfig driverConfig = ConfigFactory.create(DriverConfig.class);
-        Configuration.baseUrl = "https://alfabank.ru/";
         Configuration.pageLoadStrategy = driverConfig.pageLoadStrategy();
         Configuration.browser = driverConfig.browser();
         Configuration.browserVersion = driverConfig.browserVersion();

@@ -38,8 +38,7 @@ public class AlfaBankHeaderPage {
     }
 
 
-    public AlfaBankHeaderPage openPage() {
-        open("/");
-        return this;
+    public void openPage() {
+        open("https://alfabank.ru/");
     }
 }
