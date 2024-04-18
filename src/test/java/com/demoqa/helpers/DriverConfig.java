@@ -11,7 +11,7 @@ public interface DriverConfig extends Config {
     @DefaultValue("chrome")
     String browser();
 
-    @DefaultValue("99.0")
+    @DefaultValue("100.0")
     String browserVersion();
 
     @DefaultValue("1280x720")
