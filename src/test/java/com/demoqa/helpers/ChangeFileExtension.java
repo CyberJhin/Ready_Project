@@ -2,7 +2,7 @@ package com.demoqa.helpers;
 
 import java.io.File;
 
-public class ChangeExtension {
+public class ChangeFileExtension {
 
     public static File changeExtension(File downloadedFile, String desiredExtension) {
         File newFile = null;

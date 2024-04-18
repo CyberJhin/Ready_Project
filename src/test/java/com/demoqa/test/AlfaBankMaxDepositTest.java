@@ -11,7 +11,7 @@ import java.io.File;
 import com.codeborne.pdftest.PDF;
 
 import static com.codeborne.selenide.Selenide.*;
-import static com.demoqa.helpers.ChangeExtension.changeExtension;
+import static com.demoqa.helpers.ChangeFileExtension.changeExtension;
 import static io.qameta.allure.Allure.step;
 
 @Tags({@Tag("main")})
