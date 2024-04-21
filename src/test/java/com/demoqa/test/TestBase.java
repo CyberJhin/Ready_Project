@@ -39,7 +39,7 @@ public class TestBase {
     }
 
 
-    /*
+
     @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
@@ -47,5 +47,5 @@ public class TestBase {
         Attach.browserConsoleLogs();
         Attach.addVideo();
     }
- */
+
 }
