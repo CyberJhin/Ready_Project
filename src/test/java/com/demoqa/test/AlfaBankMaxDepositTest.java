@@ -7,6 +7,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import java.io.File;
+import java.util.concurrent.atomic.AtomicReference;
 
 import com.codeborne.pdftest.PDF;
 
@@ -94,14 +95,21 @@ public class AlfaBankMaxDepositTest extends TestBase {
     @Test
     @Owner("SDF")
     @Link(value = "Репозиторий тестов", url = "https://github.com/CyberJhin/Project_For_Test_Task")
-    void downloadFileFromMaxDepositPageTest() throws Exception {
-        open("https://alfabank.ru/make-money/deposits/alfa-vklad/max/");
-        File downloadedFile = $("a[data-test-id='detailedConditionsBtn-rub']").download();
+    void downloadFileFromMaxDepositPageTest() {
+        AtomicReference<File> downloadedFile = null;
+        step("Open form alfabank", () -> {
+            open("https://alfabank.ru/make-money/deposits/alfa-vklad/max/");
+        });
+        step("download file", () -> {
+             downloadedFile.set($("a[data-test-id='detailedConditionsBtn-rub']").download());
+       });
+        step("Verify file", () -> {
+            File newFile = changeExtension(downloadedFile.get(), ".pdf");
+            assert newFile != null;
+            PDF pdf = new PDF(newFile);
+            Assertions.assertNotNull(pdf.text);
+        });
 
-        File newFile = changeExtension(downloadedFile, ".pdf");
-
-        PDF pdf = new PDF(newFile);
-        Assertions.assertNotNull(pdf.text);
     }
 }
 
