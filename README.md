@@ -77,6 +77,9 @@ main -DremoteUrl=${SELENOID_URL}
 
 ## <img src="media/logo/Allure_Report.svg" title="Allure Report" width="4%"/> Пример Allure-отчета
 ### Overview
+<p align="center">
+<img title="Jenkins Build" src="media/screens/image.png">
+</p>
 
 
 
@@ -84,27 +87,17 @@ main -DremoteUrl=${SELENOID_URL}
 
 
 
-## <img src="media/logo/AllureTestOps.svg" title="Allure TestOps" width="4%"/> Интеграция с Allure TestOps
-
-Выполнена интеграция сборки <code>Jenkins</code> с <code>Allure TestOps</code>.
-Результат выполнения автотестов отображается в <code>Allure TestOps</code>
-На Dashboard в <code>Allure TestOps</code> отображена статистика пройденных тестов.
-
-
-
-## <img src="media/logo/Jira.svg" title="Jira" width="4%"/> Интеграция с Jira
-
-Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>, в тикете отображается информация, какие тест-кейсы были написаны в рамках задачи и результат их прогона.
-
-
-
 ## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
 
 После завершения сборки, бот созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
 
-
+<p align="center">
+<img title="Jenkins Build" src="media/screens/tg.PNG">
+</p>
 
 ## Видео примера запуска тестов в Selenoid
 
 К каждому тесту в отчете прилагается видео прогона.
-
+<p align="center">
+  <img title="Selenoid Video" src="media/screens/videoAllure.gif">
+</p>
